@@ -4,30 +4,59 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christmas Magic</title>
+  <title>Cozy Christmas Night</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>🎄 Merry Christmas 🎄</h1>
-    <p>Warm lights, cozy cocoa, and a little Christmas magic</p>
-  </header>
+  <!-- Snow -->
+  <div class="snow"></div>
 
-  <div class="sky">
-    <div class="santa">🎅🦌🦌🦌🛷</div>
+  <!-- Welcome Popup -->
+  <div class="popup" id="welcomePopup">
+    <h2>🎄 Merry Christmas 🎄</h2>
+    <p>Click the hot cocoa for a cozy surprise ☕</p>
   </div>
 
+  <!-- Cocoa Popup -->
+  <div class="popup hidden" id="cocoaPopup">
+    <h2>☕ Cozy Cocoa Time</h2>
+    <p>Warm hands, sweet marshmallows, winter magic ✨</p>
+    <button onclick="closeCocoa()">Close</button>
+  </div>
+
+  <header>
+    <h1>Cozy Christmas Night</h1>
+    <p>Lights glowing, snow falling, magic everywhere</p>
+  </header>
+
+  <!-- Santa Animation -->
+  <div class="sky">
+    <img src="https://images.unsplash.com/photo-1608889175570-20e9bfa5e3a4" alt="Santa" class="santa" />
+  </div>
+
+  <!-- Scene -->
   <section class="scene">
-    <div class="item">🎄</div>
-    <div class="item">☕</div>
-    <div class="item">❄️</div>
+    <img src="https://images.unsplash.com/photo-1544025162-d76694265947" alt="Christmas Tree" class="item" />
+    <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348" alt="Hot Cocoa" class="item clickable" onclick="openCocoa()" />
   </section>
 
   <footer>
-    Made with ❤️ for Christmas
+    Cozy winter vibes ❄️✨
   </footer>
+
+  <script>
+    function openCocoa() {
+      document.getElementById('cocoaPopup').classList.remove('hidden');
+    }
+
+    function closeCocoa() {
+      document.getElementById('cocoaPopup').classList.add('hidden');
+    }
+  </script>
 
 </body>
 </html>
+
+
 
